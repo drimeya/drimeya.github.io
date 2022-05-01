@@ -41,3 +41,15 @@ jQuery(function($) {
 
 });
 
+const hamburger = document.querySelector('.hamburger'),
+      menu = document.querySelector('.header');
+
+hamburger.addEventListener('click',() => {
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+window.addEventListener('touchmove', function() {
+    hamburger.classList.remove('active');
+    menu.classList.remove('active');
+  });
+
